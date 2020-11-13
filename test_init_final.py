@@ -2249,11 +2249,12 @@ class mainCog(commands.Cog):
 						description= boss_information[0],
 						color=0x0000ff
 						)
-				embed.add_field(
+				"""embed.add_field(
 						name="----- 미예약 보스 -----",
 						value= tmp_boss_information[0],
 						inline = False
-						)				
+						)
+"""						
 				await ctx.send( embed=embed, tts=False)
 			else : 
 				###########################일반보스출력
@@ -2281,7 +2282,7 @@ class mainCog(commands.Cog):
 							)
 					await ctx.send( embed=embed, tts=False)
 				###########################미예약보스출력
-				if len(tmp_boss_information[0]) != 0:
+				"""if len(tmp_boss_information[0]) != 0:
 					if len(tmp_boss_information) == 1 :
 						tmp_boss_information[0] = "```fix\n" + tmp_boss_information[0][:len(tmp_boss_information[0])-1] + "\n```"
 					else:
@@ -2310,7 +2311,7 @@ class mainCog(commands.Cog):
 							color=0x0000ff
 							)
 					await ctx.send( embed=embed, tts=False)
-
+"""
 			await dbSave()
 			await data_list_Save("kill_list.ini", "-----척살명단-----", kill_Data)
 			await data_list_Save("item_list.ini", "-----아이템목록-----", item_Data)
@@ -2466,7 +2467,7 @@ class mainCog(commands.Cog):
 				await ctx.send( embed=embed, tts=False)
 
 			###########################미예약보스출력
-			if len(tmp_boss_information[0]) != 0:
+			"""if len(tmp_boss_information[0]) != 0:
 				if len(tmp_boss_information) == 1 :
 					tmp_boss_information[0] = "```fix\n" + tmp_boss_information[0][:len(tmp_boss_information[0])-1] + "\n```"
 				else:
@@ -2495,7 +2496,7 @@ class mainCog(commands.Cog):
 						color=0x0000ff
 						)
 				await ctx.send( embed=embed, tts=False)
-
+"""
 			await dbSave()
 			await data_list_Save("kill_list.ini", "-----척살명단-----", kill_Data)
 			await data_list_Save("item_list.ini", "-----아이템목록-----", item_Data)
